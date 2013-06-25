@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>	
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel='stylesheet' href='css/bootstrap.css'>
+
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</head>
+	<body>
+		<form id='user_data'>
+			<fieldset class='form-horizontal' class='name+contact'>
+				<legend>Name and Contact Information</legend>
+				<div class='control-group'>
+					<label class='control-label' for='name_first'>First Name</label>
+					<div class='controls'>
+						<input type='text' id='name_first' placeholder='John'/>
+					</div>
+				</div>
+				<div class='control-group'>
+					<label class='control-label' for='name_last'>Last Name</label>
+					<div class='controls'>
+						<input type='text' id='name_last' placeholder='Zoidberg'/>
+					</div>
+				</div>
+				<div class='control-group'>
+					<label class='control-label' for='email'>Email</label>
+					<div class='controls'>
+						<input type='text' id='email' placeholder='Zoidberg@whynotzoidberg.com'>
+					</div>
+				</div>
+				<div class='control-group'>
+					<label class='control-label' for='address'>Address</label>
+					<div class='controls'>
+						<input type='text' id='address' placeholder='54 W 57th St.'/>
+					</div>
+				</div>
+				<div class='control-group'>
+					<label class='control-label' for='city'>City, State, Zip</label>
+					<div class='controls' class='form-inline'>
+						<input type='text' id='city' placeholder='New New York'/>
+						<select id='state' class='input-mini'>
+							<option>--</option>
+							<option>AK</option>
+							<option>AL</option>
+							<option>AR</option>
+							<option>AZ</option>
+							<option>CA</option>
+							<option>CO</option>
+							<option>CT</option>
+							<option>DC</option>
+							<option>DE</option>
+							<option>FL</option>
+							<option>GA</option>
+							<option>HI</option>
+							<option>IA</option>
+							<option>ID</option>
+							<option>IL</option>
+							<option>IN</option>
+							<option>KS</option>
+							<option>KY</option>
+							<option>LA</option>
+							<option>MA</option>
+							<option>MD</option>
+							<option>ME</option>
+							<option>MI</option>
+							<option>MN</option>
+							<option>MO</option>
+							<option>MS</option>
+							<option>MT</option>
+							<option>NE</option>
+							<option>NH</option>
+							<option>NJ</option>
+							<option>NM</option>
+							<option>NV</option>
+							<option>NY</option>
+							<option>NC</option>
+							<option>ND</option>
+							<option>OH</option>
+							<option>OK</option>
+							<option>OR</option>
+							<option>PA</option>
+							<option>RI</option>
+							<option>SC</option>
+							<option>SD</option>
+							<option>TN</option>
+							<option>TX</option>
+							<option>UT</option>
+							<option>VT</option>
+							<option>VA</option>
+							<option>WA</option>
+							<option>WV</option>
+							<option>WI</option>
+							<option>WY</option>
+						</select>
+						<input type='text' id='zip' placeholder='#####' class='input-small'/>
+					</div>
+				</div>
+			</fieldset>
+
+			<fieldset class='form-horizontal' class='skills'>
+				<legend>Skills</legend>
+				<div class='category_container'>
+					<div class='skill_category_block'>
+						<div class='control-group'>
+							<label class='control-label'>Category</label>
+							<div class='controls'>
+								<input type='text' placeholder='Surgery'/>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class='skills_container'>
+					<div class='skill_block'>
+						<div class='control-group'>
+							<div class='controls'>
+								<div class='form-inline'>
+									<label>Skill
+										<input type='text' placeholder='Chopping blindly into goop'/>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<span class='help-block'>
+						<a href='#' class='skill_block_add'>
+							<button class='btn' type='button'>Add Skill</button>
+						</a>
+					</span>
+				</div>
+
+				<div class='big_skills_template_block'>
+					<div class='category_container'>
+						<div class='skill_category_block'>
+							<div class='control-group'>
+								<label class='control-label'>Category</label>
+								<div class='controls'>
+									<input type='text' placeholder='Surgery'/>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class='skills_container'>
+						<div class='skill_block'>
+							<div class='control-group'>
+								<div class='controls'>
+									<div class='form-inline'>
+										<label>Skill
+											<input type='text' placeholder='Chopping blindly into goop'/>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<span class='help-block'>
+							<a href='#' class='skill_block_add'>
+								<button class='btn' type='button'>Add Skill</button>
+							</a>
+						</span>
+					</div>
+				</div>
+
+				<span class='help-block'>
+					<a href='#' class='category_block_add'>
+						<button class='btn' type='button'>Add Category</button>
+					</a>
+				</span>
+			</fieldset>
+
+			<fieldset class='form-horizontal' class='Education'>
+				<legend>Education</legend>
+				<div class='education_block'>
+					<label>School</label>
+					<input type='text' placeholder='Globetrotter U'/>
+					<label>Degree</label>
+					<input type='text' placeholder='Art History'/>
+				</div>
+				<span class='help-block'>
+					<a href='#' class='education_block_add'>
+						add another school
+					</a>
+				</span>
+			</fieldset>
+			<button type='submit' class='btn'>Save &amp; Continue</button>
+		</form>
+	</body>
+</html>
