@@ -7,6 +7,8 @@
 	height: 0;
 }
 
+/*Start CSS for Index.html*/
+
 #container {
 	width: 1000px;
 	border: 1px solid black;
@@ -132,6 +134,11 @@ li {
 	width: 10px;
 }
 
+/*End CSS for index.html*/
+
+
+/*Start CSS for signup.html*/
+
 .category_container {
 	float: left;
 	display: block;
@@ -166,23 +173,21 @@ li {
 	right: 30px;
 }
 
-
-
 .big_skills_template_block {
-	border: 1px dashed black;
 	padding-top: 0;
 	display: none;
 	margin-top: 0;
 }
 
 .category_block_add {
-
+	position: relative;
+	left: 100px;
 }
 
 
 
 
-
+/*End CSS for signup.html*/
 
 
 

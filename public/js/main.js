@@ -123,9 +123,7 @@ function category_add() {
 	console.log(html);
 	var button = html.find('.btn');
 	button.click(skill_add);
-	html.css({	'z-index'		: 1,
-				'margin-top' 	: 0,
-				'border'		: 0,
+	html.css({	'margin-top' 	: 0,
 				'position'		: 'relative'
 			});
 	$('.big_skills_template_block').last().after(html);
