@@ -141,6 +141,8 @@ li {
 	float: left;
 	display: block;
 	margin-left: 0px;
+	width: 690px;
+	position: relative;
 }
 
 .skills_container .skill_block .control-group .controls {
@@ -149,25 +151,34 @@ li {
 	margin-left: 50px;
 }
 
-.skill_block_add {
-	margin-left: 50px;
+.skills_container .skill_block label {
+	margin-right: 20px;
 }
 
+.skills_container .skill_block .form-inline {
+	width: 514px;
+}
+
+.skill_block_add {
+	float: right;
+	position: absolute;
+	bottom: 25px;
+	right: 30px;
+}
+
+
+
 .big_skills_template_block {
-	position: relative;
+	border: 1px dashed black;
 	padding-top: 0;
-	display: block;
-	z-index: -1;
+	display: none;
 	margin-top: 0;
-	visibility: hidden;
 }
 
 .category_block_add {
+
 }
 
-.skill_block_add {
-	position: relative;
-}
 
 
 

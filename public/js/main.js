@@ -80,14 +80,24 @@ $(document).ready(function() {
 	$('.skill_block_add').click(skill_add);
 
 	$('#user_data').submit(function() {
-		var userData = {};
+		var userData 		= {};
 		userData.name_first = $('#name_first').val();
-		userData.name_last = $('#name_last').val();
-		userData.email = $('#email').val();
-		userData.address = $('#address').val();
-		userData.city = $('#city').val();
-		userData.state = $('#state').val();
-		userData.zip = $('zip').val();
+		userData.name_last 	= $('#name_last').val();
+		userData.email 		= $('#email').val();
+		userData.address 	= $('#address').val();
+		userData.city 		= $('#city').val();
+		userData.state 		= $('#state').val();
+		userData.zip 		= $('#zip').val();
+
+		userData.skills = [];
+
+
+		var categories = [];
+		$('.category').each(function(index, item) {
+			console.log(item);
+			var element = $(item);
+			var text = element.find('input')
+		});
 
 		userData.schools = [];
 		var education_blocks = $('.education_block');
@@ -103,6 +113,7 @@ function skill_add() {
 	console.log(html);
 	html.css('display', 'none');
 	$(this).parent().before(html);
+	html.find($('.skill')).val('');
 	html.slideDown(500);
 	return false;
 }
@@ -112,11 +123,10 @@ function category_add() {
 	console.log(html);
 	var button = html.find('.btn');
 	button.click(skill_add);
-	html.css({	'display'		: 'none',
-				'z-index'		: 'none',
-				'margin-top' 	: '0',
-				'visibility' 	: 'visible',
-				'border'		: 'none'
+	html.css({	'z-index'		: 1,
+				'margin-top' 	: 0,
+				'border'		: 0,
+				'position'		: 'relative'
 			});
 	$('.big_skills_template_block').last().after(html);
 	html.slideDown(500);
