@@ -7,10 +7,6 @@
 	height: 0;
 }
 
-.forclearing {
-	clear: both;
-}
-
 #container {
 	width: 1000px;
 	border: 1px solid black;
@@ -48,29 +44,29 @@ img {
 #first_name {
 	float: left;
 	margin-right: 10px;
-	display: inline-block;
+	display: block;
 }
 
 #middle_name {
 	float: left;
-	display: inline-block;
+	display: block;
 	margin-right: 10px;
 }
 
 #last_name {
 	float: left;
-	display: inline-block;
+	display: block;
 }
 
 #address {
 	float: left;
 	margin-right: 10px;
-	display: inline-block;
+	display: block;
 }
 
 #contact {
 	float: left;
-	display: inline-block;
+	display: block;
 }
 
 #skills {
@@ -138,24 +134,19 @@ li {
 
 .category_container {
 	float: left;
-	display: inline-block;
+	display: block;
 }
 
 .skills_container {
 	float: left;
-	display: inline-block;
+	display: block;
 	margin-left: 0px;
 }
 
 .skills_container .skill_block .control-group .controls {
 	float: left;
-	display: inline-block;
+	display: block;
 	margin-left: 50px;
-}
-
-.form-inline label textarea {
-	vertical-align: top;
-	resize: none;
 }
 
 .skill_block_add {
@@ -163,18 +154,15 @@ li {
 }
 
 .big_skills_template_block {
-	border: 1px dashed black;
+	position: relative;
 	padding-top: 0;
-	display: inline-block;
+	display: block;
 	z-index: -1;
-	margin-top: -140px;
+	margin-top: 0;
 	visibility: hidden;
 }
 
 .category_block_add {
-	position: relative;
-	left: 100px;
-	bottom: 50px;
 }
 
 .skill_block_add {

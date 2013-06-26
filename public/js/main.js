@@ -82,6 +82,13 @@ $(document).ready(function() {
 	$('#user_data').submit(function() {
 		var userData = {};
 		userData.name_first = $('#name_first').val();
+		userData.name_last = $('#name_last').val();
+		userData.email = $('#email').val();
+		userData.address = $('#address').val();
+		userData.city = $('#city').val();
+		userData.state = $('#state').val();
+		userData.zip = $('zip').val();
+
 		userData.schools = [];
 		var education_blocks = $('.education_block');
 		console.log(education_blocks);
@@ -111,7 +118,7 @@ function category_add() {
 				'visibility' 	: 'visible',
 				'border'		: 'none'
 			});
-	$(this).parent().before(html);
+	$('.big_skills_template_block').last().after(html);
 	html.slideDown(500);
 	return false;
 }
