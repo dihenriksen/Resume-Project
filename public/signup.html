@@ -25,9 +25,27 @@
 					</div>
 				</div>
 				<div class='control-group'>
+					<label class='control-label' for='phone'>Phone</label>
+					<div class='controls'>
+						<input type='text' id='phone' placeholder='(###) ###-####'/>
+					</div>
+				</div>
+				<div class='control-group'>
 					<label class='control-label' for='email'>Email</label>
 					<div class='controls'>
 						<input type='text' id='email' placeholder='Zoidberg@whynotzoidberg.com'>
+					</div>
+				</div>
+				<div class='control-group'>
+					<label class='control-label' for='twitter'>Twitter</label>
+					<div class='controls'>
+						<input type='text' id='twitter' placeholder='God?itsmezoidberg'/>
+					</div>
+				</div>
+				<div class='control-group'>
+					<label class='control-label' for='personal_site'>Personal Website</label>
+					<div class='controls'>
+						<input type='text' id='personal_site' placeholder='Youstillhavezoidberg.com'/>
 					</div>
 				</div>
 				<div class='control-group'>
@@ -195,14 +213,43 @@
 			<fieldset class='form-horizontal' class='Education'>
 				<legend>Education</legend>
 				<div class='education_block'>
-					<label>School</label>
-					<input type='text' placeholder='Globetrotter U'/>
-					<label>Degree</label>
-					<input type='text' placeholder='Art History'/>
+					<div class='control-group'>
+						<label class='control-label' for='school'>School</label>
+						<div class='controls'>
+							<input class='school' type='text' placeholder='Globetrotter U'/>
+						</div>
+						<label class='control-label' for='degree'>Degree</label>
+						<div class='controls'>
+							<select class='degree'>
+								<option>--</option>
+								<option>Associate</option>
+								<option>Bachelor</option>
+								<option>Master</option>
+								<option>PhD</option>
+								<option>Post-Doc</option>
+							</select>
+						</div>
+						<label class='control-label' for='major'>Major</label>
+						<div class='controls'>
+							<input class='major' type='text' placeholder='Bending'/>
+						</div>
+						<label class='control-label' for='minor'>Minor</label>
+						<div class='controls'>
+							<input class='minor' type='text' placeholder='Roboamerican studies'/>
+						</div>
+						<label class='control-label' for='gpa'>GPA</label>
+						<div class='controls'>
+							<input class='gpa' type='text' placeholder='0.0'/>
+						</div>
+						<label class='control-label' for='secret_societies'>Secret Societies</label>
+						<div class='controls'>
+							<input class='secret_societies' type='text' placeholder='S.O.C.S'/>
+						</div>
+					</div>
 				</div>
 				<span class='help-block'>
 					<a href='#' class='education_block_add'>
-						add another school
+						<button class='btn'>Add Another School</button>
 					</a>
 				</span>
 			</fieldset>

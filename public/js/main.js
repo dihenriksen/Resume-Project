@@ -99,10 +99,11 @@ $(document).ready(function() {
 		});
 
 		$('.big_skills_template_block').find('.skill_copy_container').each(function(index, element) {
-			userData.skills[index+1].push($('element').find('.category').val());
+			console.log('here');
+			userData.skills[index+1].push($(element).find('.category').val());
 			$(element).find('.form-inline').each(function(index1, element1) {
-				userData.skills[index+1].push($(element).find('.skill').val());
-				userData.skills[index+1].push($(element).find('.years_experience').val());
+				userData.skills[index+1].push($(element1).find('.skill').val());
+				userData.skills[index+1].push($(element1).find('.years_experience').val());
 			});
 		});
 		console.log(userData);
