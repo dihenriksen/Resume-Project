@@ -71,6 +71,13 @@ $(document).ready(function() {
 		var html = $('.education_block').first().clone();
 		html.css('display', 'none');
 		$(this).before(html);
+		html.find('.school').val('');
+		html.find('.degree').val('--');
+		html.find('.major').val('');
+		html.find('.minor').val('');
+		html.find('.gpa').val('');
+		html.find('.secret_societies').val('');
+		html.find('.graduation_date').val('');
 		html.slideDown(500);
 		return false;
 	});
