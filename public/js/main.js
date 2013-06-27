@@ -97,39 +97,18 @@ $(document).ready(function() {
 		userData.zip 		= $('#zip').val();
 
 		userData.skills = [];
-		userData.skills[0] = []; //array that will hold first category and set of skills
-		userData.skills[0][0] = $('.category').first().val();
-
-		$('.skills_container').first().find('.form-inline').each(function(index, element) {
-			userData.skills[0].push($(element).find('.skill').val());
-			userData.skills[0].push($(element).find('.years_experience').val());
-		});
-
-		$('.big_skills_template_block').find('.skill_copy_container').each(function(index, element) {
-			console.log('here');
-			userData.skills[index+1].push($(element).find('.category').val());
-			$(element).find('.form-inline').each(function(index1, element1) {
-				userData.skills[index+1].push($(element1).find('.skill').val());
-				userData.skills[index+1].push($(element1).find('.years_experience').val());
+		$('.skills').find('.skill').each(function(index, element) {
+			console.log(index);
+			userData.skills.push({
+				skill 		: $(element).val(),
+				experience 	: $(element).parent().next().children('.years_experience').val(),
+				category 	: $(element).closest('.skills_container').prev().find('.category').val()
 			});
 		});
-		console.log(userData);
-
-
-		// var categories = [];
-		// $('.category').each(function(index, element) {
-		// 	if ($(element).val() != '') { categories[index] = $(element).val(); };
-		// });
-		// console.log(categories);
-
-		// var the_skills = [];
-		// $('.skill').each(function(index, element) {
-		// 	if ($(element).val() != '') { the_skills[index] = $(element).val(); };
-		// });
-		// console.log(the_skills);
 
 		userData.schools = [];
-		var education_blocks = $('.education_block');
+		// var education_blocks = $('.education_block');
+		console.log('The end of the submit function');
 		return false;
 	});
 });
