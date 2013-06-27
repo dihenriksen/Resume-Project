@@ -188,7 +188,9 @@ legend {
 	left: 100px;
 }
 
-
+textarea {
+	resize: none;
+}
 
 /*End CSS for signup.html*/
 

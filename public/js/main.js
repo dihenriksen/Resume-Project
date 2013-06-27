@@ -67,30 +67,22 @@
 
 $(document).ready(function() {
 
-	$('.education_block_add').click(function() {
-		var html = $('.education_block').first().clone();
-		html.css('display', 'none');
-		$(this).before(html);
-		html.find('.school').val('');
-		html.find('.degree').val('--');
-		html.find('.major').val('');
-		html.find('.minor').val('');
-		html.find('.gpa').val('');
-		html.find('.secret_societies').val('');
-		html.find('.graduation_date').val('');
-		html.slideDown(500);
-		return false;
-	});
+	$('.education_block_add').click(add_education);
 
 	$('.category_block_add').click(add_category);
 
 	$('.skill_block_add').click(add_skill);
 
+	$('.work_block_add').click(add_work);
+
 	$('#user_data').submit(function() {
 		var userData 		= {};
 		userData.name_first = $('#name_first').val();
 		userData.name_last 	= $('#name_last').val();
+		userData.phone 		= $('#phone').val();
 		userData.email 		= $('#email').val();
+		userData.twitter 	= $('#twitter').val();
+		userData.site 		= $('#personal_site').val();
 		userData.address 	= $('#address').val();
 		userData.city 		= $('#city').val();
 		userData.state 		= $('#state').val();
@@ -98,16 +90,31 @@ $(document).ready(function() {
 
 		userData.skills = [];
 		$('.skills').find('.skill').each(function(index, element) {
-			console.log(index);
-			userData.skills.push({
-				skill 		: $(element).val(),
-				experience 	: $(element).parent().next().children('.years_experience').val(),
-				category 	: $(element).closest('.skills_container').prev().find('.category').val()
-			});
+			if ($(element).val() != '') {
+				userData.skills.push({
+					skill 		: $(element).val(),
+					experience 	: $(element).parent().next().children('.years_experience').val(),
+					category 	: $(element).closest('.skills_container').prev().find('.category').val()
+				});
+			};
+			
 		});
+		console.log(userData.skills); 
 
-		userData.schools = [];
-		// var education_blocks = $('.education_block');
+		userData.education = [];
+		$('.education_block').each(function(index, element) {
+			userData.education.push({
+				school		: $(element).find('.school').val(),
+				degree		: $(element).find('.degree').val(),
+				major		: $(element).find('.major').val(),
+				minor		: $(element).find('.minor').val(),
+				gpa			: $(element).find('.gpa').val(),
+				societies 	: $(element).find('.secret_societies').val(),
+				graduation 	: $(element).find('.graduation_date').val()
+			})
+		})
+
+
 		console.log('The end of the submit function');
 		return false;
 	});
@@ -134,9 +141,33 @@ function add_category() {
 	return false;
 }
 
+function add_work() {
+	var html = $('.work_block').first().clone();
+	html.css('display', 'none');
+	$(this).parent().before(html);
+	html.find($('.company')).val('');
+	html.find($('.position')).val('');
+	html.find($('.work_start')).val('');
+	html.find($('.work_end')).val('');
+	html.find($('.responsibilities')).val('');
+	html.slideDown(500);
+	return false;
+}
 
-
-
+function add_education() {
+	var html = $('.education_block').first().clone();
+	html.css('display', 'none');
+	$(this).parent().before(html);
+	html.find('.school').val('');
+	html.find('.degree').val('--');
+	html.find('.major').val('');
+	html.find('.minor').val('');
+	html.find('.gpa').val('');
+	html.find('.secret_societies').val('');
+	html.find('.graduation_date').val('');
+	html.slideDown(500);
+	return false;
+}
 
 
 
