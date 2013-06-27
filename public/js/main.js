@@ -75,9 +75,9 @@ $(document).ready(function() {
 		return false;
 	});
 
-	$('.category_block_add').click(category_add);
+	$('.category_block_add').click(add_category);
 
-	$('.skill_block_add').click(skill_add);
+	$('.skill_block_add').click(add_skill);
 
 	$('#user_data').submit(function() {
 		var userData 		= {};
@@ -90,27 +90,44 @@ $(document).ready(function() {
 		userData.zip 		= $('#zip').val();
 
 		userData.skills = [];
+		userData.skills[0] = []; //array that will hold first category and set of skills
+		userData.skills[0][0] = $('.category').first().val();
 
-
-		var categories = [];
-		$('.category').each(function(index, item) {
-			console.log(item);
-			var element = $(item);
-			var text = element.find('input')
+		$('.skills_container').first().find('.form-inline').each(function(index, element) {
+			userData.skills[0].push($(element).find('.skill').val());
+			userData.skills[0].push($(element).find('.years_experience').val());
 		});
+
+		$('.big_skills_template_block').find('.skill_copy_container').each(function(index, element) {
+			userData.skills[index+1].push($('element').find('.category').val());
+			$(element).find('.form-inline').each(function(index1, element1) {
+				userData.skills[index+1].push($(element).find('.skill').val());
+				userData.skills[index+1].push($(element).find('.years_experience').val());
+			});
+		});
+		console.log(userData);
+
+
+		// var categories = [];
+		// $('.category').each(function(index, element) {
+		// 	if ($(element).val() != '') { categories[index] = $(element).val(); };
+		// });
+		// console.log(categories);
+
+		// var the_skills = [];
+		// $('.skill').each(function(index, element) {
+		// 	if ($(element).val() != '') { the_skills[index] = $(element).val(); };
+		// });
+		// console.log(the_skills);
 
 		userData.schools = [];
 		var education_blocks = $('.education_block');
-		console.log(education_blocks);
-		console.log(userData);
 		return false;
 	});
 });
 
-function skill_add() {
-	console.log('clicked');
+function add_skill() {
 	var html = $('.skill_block').first().clone();
-	console.log(html);
 	html.css('display', 'none');
 	$(this).parent().before(html);
 	html.find($('.skill')).val('');
@@ -118,13 +135,12 @@ function skill_add() {
 	return false;
 }
 
-function category_add() {
+function add_category() {
 	var html = $('.big_skills_template_block').first().clone();
-	console.log(html);
 	var button = html.find('.btn');
-	button.click(skill_add);
-	html.css({	'margin-top' 	: 0,
-				'position'		: 'relative'
+	button.click(add_skill);
+	html.css({	'margin-top' : 0,
+				'position'	 : 'relative'
 			});
 	$('.big_skills_template_block').last().after(html);
 	html.slideDown(500);

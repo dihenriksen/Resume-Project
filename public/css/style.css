@@ -139,6 +139,10 @@ li {
 
 /*Start CSS for signup.html*/
 
+legend {
+	margin-left: 20px;
+}
+
 .category_container {
 	float: left;
 	display: block;
