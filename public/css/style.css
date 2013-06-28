@@ -183,7 +183,7 @@ legend {
 	margin-top: 0;
 }
 
-.category_block_add, .education_block_add {
+.category_block_add, .education_block_add, .work_block_add, .greatness_block_add, .responsibility_add {
 	position: relative;
 	left: 100px;
 }

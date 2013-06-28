@@ -43,15 +43,21 @@
 					</div>
 				</div>
 				<div class='control-group'>
+					<label class='control-label' for='linked_in'>LinkedIn</label>
+					<div class='controls'>
+						<input type='text' id='linked_in' placeholder='Zoidberg!'/>
+					</div>
+				</div>
+				<div class='control-group'>
 					<label class='control-label' for='personal_site'>Personal Website</label>
 					<div class='controls'>
 						<input type='text' id='personal_site' placeholder='Youstillhavezoidberg.com'/>
 					</div>
 				</div>
 				<div class='control-group'>
-					<label class='control-label' for='address'>Address</label>
+					<label class='control-label' for='street'>Address</label>
 					<div class='controls'>
-						<input type='text' id='address' placeholder='54 W 57th St.'/>
+						<input type='text' id='street' placeholder='54 W 57th St.'/>
 					</div>
 				</div>
 				<div class='control-group'>
@@ -245,6 +251,10 @@
 						<div class='controls'>
 							<input class='secret_societies' type='text' placeholder='Skull and Bones'/>
 						</div>
+						<label class='control-label' for='matriculation_date'>Matriculation Date</label>
+						<div class='controls'>
+							<input class='matriculation_date' type='month'/>
+						</div>
 						<label class='control-label' for='graduation_date'>Graduation Date</label>
 						<div class='controls'>
 							<input class='graduation_date' type='month'/>
@@ -264,6 +274,10 @@
 						<div class='controls'>
 							<input class='company' type='text' placeholder="Mom's Friendly Robot Company"/>
 						</div>
+						<label class='control-label' for='location'>Location</label>
+						<div class='controls'>
+							<input class='location' type='text' placeholder="New New York"/>
+						</div>
 						<label class='control-label' for='position'>Position</label>
 						<div class='controls'>
 							<input class='position' type='text' placeholder='Evil Scientist'/>
@@ -276,10 +290,21 @@
 						<div class='controls'>
 							<input class='work_end' type='month'/>
 						</div>
-						<label class='control-label' for='responsibilities'>Responsibilities</label>
+						<label class='control-label' for='project'>Project</label>
 						<div class='controls'>
-							<textarea class='responsibilities' rows='3'></textarea>
+							<input class='project' type='text'/>
 						</div>
+						<div class='resp'>
+							<label class='control-label' for='responsibilities'>Responsibilities</label>
+							<div class='controls'>
+								<textarea class='responsibilities' rows='3'></textarea>
+							</div>
+						</div>
+						<span class='help-block'>
+							<a href='#' class='responsibility_add'>
+								<button class='btn'>Add Responsibility</button>
+							</a>
+						</span>
 					</div>
 				</div>
 				<span class='help-block'>
@@ -287,7 +312,30 @@
 						<button class='btn'>Add Work Experience</button>
 					</a>
 				</span>
-			<fieldset>
+
+			<fieldset class='form-horizontal accomplishments'>
+				<legend>Accomplishments</legend>
+				<div class='accomplishments_block'>
+					<div class='control-group'>
+						<label class='control-label' for='title'>Title</label>
+						<div class='controls'>
+							<input class='title' type='text' placeholder='Last Nobel Prize'/>
+						</div>
+						<label class='control-label' for='accomplishment_date'>Date</label>
+						<div class='controls'>
+							<input class='accomplishment_date' type='month'/>
+						</div>
+						<label class='control-label' for='description'>Description</label>
+						<div class='controls'>
+							<textarea class='description' rows='3'></textarea>
+						</div>
+					</div>
+				</div>
+				<span class='help-block'>
+					<a href='#' class='greatness_block_add'>
+						<button class='btn'>Add Accomplishment</button>
+					</a>
+				</span>
 
 			</fieldset>
 			<button type='submit' class='btn'>Save &amp; Continue</button>
