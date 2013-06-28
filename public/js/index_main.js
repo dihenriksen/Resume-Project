@@ -20,6 +20,15 @@ function list_person(data) {
 function delete_this_person(id) {
 	console.log('here');
 	console.log(id);
+	var link = 'api/resumes/' + id;
+	$.ajax({
+		url : link,
+		type : 'DELETE',
+		success: function(result) {
+			console.log(result);
+			console.log('deleted!!');
+		}
+	})
 }
 
 

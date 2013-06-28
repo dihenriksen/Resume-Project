@@ -1,9 +1,4 @@
 $(document).ready(function() {
-	$.ajax('/api/resumes', {
-		complete : function(response) {
-			var resume = response.responseJSON[0];
-		}
-	});
 
 	$('.education_block_add').click(add_education);
 	$('.category_block_add').click(add_category);
@@ -99,9 +94,6 @@ $(document).ready(function() {
 			url : '/api/resumes',
 			data : the_data
 		})
-
-
-
 
 		console.log('The end of the submit function');
 		return false;
