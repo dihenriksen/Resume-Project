@@ -7,7 +7,7 @@
 	height: 0;
 }
 
-/*Start CSS for Index.html*/
+/*Begin CSS for view.html*/
 
 #container {
 	width: 1000px;
@@ -22,7 +22,7 @@ body * {
 
 img {
 	float: left;
-	height: 300px;
+	height: 200px;
 	margin: 20px;
 }
 
@@ -30,10 +30,11 @@ img {
 	position: relative;
 	float: left;
 	border: 1px solid black;
-	margin: 20px;
+	margin: 20px 20px 0 20px;
 	padding: 5px;
-	height: 300px;
+	height: 200px;
 	width: 60%;
+	border-radius: 10px;
 }
 
 #name_block {
@@ -47,12 +48,6 @@ img {
 	float: left;
 	margin-right: 10px;
 	display: block;
-}
-
-#middle_name {
-	float: left;
-	display: block;
-	margin-right: 10px;
 }
 
 #last_name {
@@ -71,14 +66,17 @@ img {
 	display: block;
 }
 
-#skills {
+#skills, #experience, #education, #accomplishments {
 	border: 1px solid black;
 	clear: left;
 	width: 900px;
 	padding: 10px 0 10px 0;
+	border-radius: 10px;
+	margin: auto;
+	margin-top: 20px;
 }
 
-#skills h1 {
+#skills h1, #experience h1, #education h1, #accomplishments h1 {
 	text-align: left;
 	padding-left: 20px;
 	background-color: gray;
@@ -99,15 +97,17 @@ li {
 	margin-left: 20px;
 }
 
-.experience {
-	border: 1px solid black;
-	margin-top: 10px;
-	width: 900px;
+.exp_details1 {
+	margin-left: 150px;
 }
 
-.experience span {
-	border: 1px dashed black;
+#experience span {
 	position: relative;
+}
+
+.expand {
+	margin-left: 20px;
+	border-radius: 100%;
 }
 
 .company {
@@ -118,26 +118,23 @@ li {
 	left: 150px;
 }
 
-.start_date {
+.work_start {
 	left: 300px;
 }
 
-.end_date {
+.work_end {
 	left: 400px;
 }
 
-.expand_button {
-	border: 1px solid black;
-	left: 15px;
-	border-radius: 15px;
-	height: 10px;
-	width: 10px;
+.school1, .accomp {
+	margin-left: 20px;
 }
 
-/*End CSS for index.html*/
+
+/*End CSS for view.html*/
 
 
-/*Start CSS for signup.html*/
+/*Begin CSS for signup.html*/
 
 legend {
 	margin-left: 20px;
